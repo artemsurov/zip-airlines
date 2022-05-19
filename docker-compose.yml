@@ -1,0 +1,38 @@
+version: "3"
+services:
+  db:
+    image: "postgres:13-alpine"
+    restart: unless-stopped
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - webnet
+    env_file: ./config/.env
+
+  web:
+    image: "zip-airlines:dev"
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+      args:
+        DJANGO_ENV: Dev
+
+    volumes:
+      - django-static:/var/www/django/static
+    depends_on:
+      - db
+    networks:
+      - webnet
+    env_file: ./config/.env
+    environment:
+      DJANGO_DATABASE_HOST: db
+
+    command: python manage.py runserver 0.0.0.0:8000
+
+
+networks:
+  webnet:
+
+volumes:
+  pgdata:
+  django-static:

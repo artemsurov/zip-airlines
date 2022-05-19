@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "zip_airlines"
+version = "0.1.0"
+description = "ZIP Airlines API"
+authors = ["Artemiy Surov"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+djangorestframework = "^3.13.1"
+Markdown = "^3.3.7"
+django-filter = "^21.1"
+django-extensions = "^3.1.5"
+drf-spectacular = "^0.22.1"
+django-configurations = "^2.3.2"
+Django = "^4.0.4"
+
+[tool.poetry.dev-dependencies]
+model-bakery = "^1.5.0"
+nplusone = "^1.0.0"
+
+django-debug-toolbar = "^3.4.0"
+django-querycount = "^0.7.0"
+django-extra-checks = "^0.11.0"
+
+pytest = "^7.1.2"
+pytest-django = "^4.5.2"
+pytest-cov = "^3.0.0"
+pytest-randomly = "^3.12.0"
+pytest-timeout = "^2.1.0"
+
+
+wemake-python-styleguide = "^0.16.1"
+flake8-pytest-style = "^1.6.0"
+flake8-django = "^1.1.2"
+flake8-logging-format = "^0.6.0"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
