@@ -6,7 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'zip_airlines.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'main.settings')
     os.environ.setdefault('DJANGO_CONFIGURATION', 'Dev')
     from configurations.management import execute_from_command_line
 

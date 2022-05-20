@@ -13,6 +13,8 @@ django-extensions = "^3.1.5"
 drf-spectacular = "^0.22.1"
 django-configurations = "^2.3.2"
 Django = "^4.0.4"
+psycopg2 = "^2.9.3"
+hypothesis = "^6.46.7"
 
 [tool.poetry.dev-dependencies]
 model-bakery = "^1.5.0"

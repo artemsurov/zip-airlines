@@ -1,0 +1,14 @@
+[run]
+omit =
+    */.cache/*
+    .venv/*
+    */cache/*
+    venv/*
+    tests/*
+    */migrations/*
+
+[report]
+skip_covered = True
+exclude_lines =
+    pragma: no cover
+sort = Cover

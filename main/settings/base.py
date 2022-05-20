@@ -15,11 +15,9 @@ from pathlib import Path
 
 
 class BaseSettings:
-    PROJECT_NAME = 'zip_airlines'
-
     # Build paths inside the project like this: BASE_DIR / 'subdir'.
     BASE_DIR = Path(__file__).resolve().parent.parent
-    DOTENV = os.path.join(BASE_DIR, 'config/.env')
+    DOTENV = os.path.join(BASE_DIR.parent, 'config/.env')
 
     # Quick-start development settings - unsuitable for production
     # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -51,6 +49,7 @@ class BaseSettings:
         'rest_framework',
 
         'main',
+        'airplane',
     ]
 
     MIDDLEWARE = [
@@ -63,7 +62,7 @@ class BaseSettings:
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
     ]
 
-    ROOT_URLCONF = 'zip_airlines.urls'
+    ROOT_URLCONF = 'main.urls'
 
     TEMPLATES = [
         {
@@ -82,7 +81,7 @@ class BaseSettings:
         },
     ]
 
-    WSGI_APPLICATION = 'zip_airlines.wsgi.application'
+    WSGI_APPLICATION = 'main.wsgi.application'
 
     # Password validation
     # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

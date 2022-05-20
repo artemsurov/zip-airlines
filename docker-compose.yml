@@ -8,6 +8,8 @@ services:
     networks:
       - webnet
     env_file: ./config/.env
+    ports:
+      - "5435:5432"
 
   web:
     image: "zip-airlines:dev"

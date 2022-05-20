@@ -18,3 +18,5 @@ services:
     volumes:
       # We only mount source code in development:
       - .:/app
+    environment:
+      DJANGO_DATABASE_PORT: 5432

@@ -14,6 +14,7 @@ class CommonConfiguration(
 
 class Dev(CommonConfiguration):
     DEBUG = True
+    ALLOWED_HOSTS = ['*']
 
 
 class Prod(CommonConfiguration):
